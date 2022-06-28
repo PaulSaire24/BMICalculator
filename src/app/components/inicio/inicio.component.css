@@ -1,0 +1,34 @@
+.fondoItem {
+    background-color: #ff111328;
+    height: 130px;
+    border-radius: 20px;
+}
+
+.fondoItem {
+    color: white;
+    cursor: pointer;
+}
+.genero {
+    font-size: 30px;
+}
+.num{
+    font-size: 32px;
+    font-weight:900;
+    margin-top: -30px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+ background-color: #ff3366;
+}
+
+.signo{
+    cursor: pointer;
+    background-color:#FF4C4F5E;
+    border-radius: 100%;
+    padding: 7px;
+    margin-left: 3px;
+}
+
+.sexoDesactivo{
+    background-color: aqua;
+}

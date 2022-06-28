@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-lg-4 offset-lg-4">
+        <h3 class="titulo">BMIcalculator</h3>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="fondoItem" [ngClass] = "{'sexoDesactivo' : sexo === 'masculino'}">
+                    <div class="container" (click) = "masculino()">
+                        <i class="fa-solid fa-mars genero"></i>
+                        <p>Masculino</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="fondoItem" [ngClass] = "{'sexoDesactivo' : sexo === 'femenino'}">
+                    <div class="container" (click) = "femenino()">
+                        <i class="fa-solid fa-venus genero"></i>
+                        <p>Femenino</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="fondoItem">
+                    <div class="container">
+                        <div>Altura</div>
+                        <div class="container2">
+                            <div class="num">{{altura}}</div>
+                            <div>cm</div>
+                        </div>
+                        <input type="range" (input) = "cambiarAltura($event)" [value]="altura" min="120" max="220" class="form-range" id="customRange1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="fondoItem">
+                    <div class="container">
+                        <p>Peso</p>
+                        <div class="num">{{peso}}</div>
+                        <div>
+                            <i class="fa-solid fa-minus signo" (click) = "peso = peso-1"></i>
+                            <i class="fa-solid fa-plus signo" (click) = "peso = peso+1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="fondoItem">
+                    <div class="container">
+                        <p>Edad</p>
+                        <div class="num">{{edad}}</div>
+                        <div>
+                            <i class="fa-solid fa-minus signo" (click) = "edad = edad-1"></i>
+                            <i class="fa-solid fa-plus signo" (click) = "edad = edad+1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <button class="btn btn-primary btn-lg btn-block" (click) = "calcularBMI()" >CALCULAR</button>
+            </div>
+        </div>
+    </div>
+</div>
